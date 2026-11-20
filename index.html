@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zermelo serverstatus</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#08090d;
+    --border:rgba(255,255,255,.09);
+    --text:#f4f5f7;
+    --muted:#9ea1ad;
+    --accent:#a78bfa;
+    --accent-soft:rgba(167,139,250,.16);
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    min-height:100vh;
+    padding:24px 16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    color:var(--text);
+    background:
+        radial-gradient(circle at 12% 8%, rgba(124,58,237,.22), transparent 42%),
+        radial-gradient(circle at 88% 18%, rgba(56,189,248,.14), transparent 40%),
+        radial-gradient(circle at 50% 100%, rgba(236,72,153,.12), transparent 45%),
+        var(--bg);
+}
+
+.card{
+    width:100%;
+    max-width:520px;
+    padding:28px 24px;
+    border:1px solid var(--border);
+    border-radius:28px;
+    background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.035));
+    box-shadow:0 24px 70px rgba(0,0,0,.42);
+    backdrop-filter:blur(22px) saturate(140%);
+    -webkit-backdrop-filter:blur(22px) saturate(140%);
+}
+
+@supports not (backdrop-filter:blur(1px)){
+    .card{
+        background:#15161c;
+    }
+}
+
+h1{
+    text-align:center;
+    font-size:26px;
+    font-weight:700;
+    letter-spacing:-.03em;
+    margin-bottom:18px;
+}
+
+.status-box{
+    padding:26px 22px;
+    text-align:center;
+    border:1px solid var(--border);
+    border-radius:22px;
+    background:rgba(255,255,255,.045);
+}
+
+.status-title{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+.status-text{
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:-.03em;
+    color:#a7f3d0;
+    margin-bottom:10px;
+}
+
+.status-info{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.6;
+}
+
+.updated{
+    margin-top:22px;
+    color:#6d707b;
+    font-size:11px;
+    line-height:1.6;
+    text-align:center;
+}
+
+.link{
+    color:var(--muted);
+    text-decoration:none;
+}
+
+.link:hover{
+    color:var(--text);
+}
+
+@media (max-width:420px){
+    body{
+        padding:16px 12px;
+    }
+
+    .card{
+        padding:22px 16px;
+    }
+
+    h1{
+        font-size:23px;
+    }
+
+    .status-text{
+        font-size:26px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Zermelo serverstatus</h1>
+
+    <div class="status-box">
+        <div class="status-title">Huidige status</div>
+        <div class="status-text">Error</div>
+        <div class="status-info">
+            Zermelo heeft URL error, kom later terug voor fixes.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
